@@ -5,7 +5,7 @@
   --pink: #ec5569;
   --aquamarine: #a8ebfa;
   --turquoise: #76e2f8;
-  --very-light-blue: #DEECF1;
+  --very-light-blue: #deecf1;
   --light-blue: #c6e3e7;
   --mid-blue: #8ebac5;
   --bright-blue: #0893fb;
@@ -65,13 +65,18 @@
     var(--deep-red) 75%,
     var(--turquoise) 75%
   );
-  background-size: 100px 100px;
-  /* background-size: 168px 168px;
-  -webkit-animation: barberpole 1.5s infinite linear;
-  animation: barberpole 1.5s infinite linear; */
+  background-size: 84px 84px;
+  /* background-size: 168px 168px; */
+  -webkit-animation: barberpole 3s infinite linear;
+  animation: barberpole 3s infinite linear;
+  animation-play-state: paused;
   transition: width 300ms ease-in-out;
   transition: height 300ms ease-in-out;
+}
 
+.card-border:hover {
+  cursor: auto;
+  animation-play-state: running;
 }
 
 @keyframes barberpole {
@@ -103,6 +108,10 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.icons:hover {
+  cursor: default;
 }
 
 a:hover,

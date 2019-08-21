@@ -32,12 +32,15 @@ body {
   /* background-color: rgba(222, 236, 241, 1); */
 }
 
+body:hover {
+  cursor: url('./img/code.svg'), auto;
+}
+
 h1,
 h2,
 h3 {
   font-family: inherit;
   font-variant: small-caps;
-  cursor: default;
 }
 
 h1 {
