@@ -25,9 +25,7 @@
   display: flex;
   justify-content: center;
   padding: 10px;
-  border-radius: 1px;
-  /* border: 1px solid blue; */
-  /* box-shadow: 2px 2px 2px var(--turquoise); */
+  border-radius: 3px;
   background: var(--turquoise);
   background-color: -webkit-linear-gradient(
     -45deg,
@@ -76,6 +74,9 @@
 
 .card-border:hover {
   cursor: auto;
+}
+
+.card__side--front.card-border {
   animation-play-state: running;
 }
 
@@ -96,18 +97,28 @@
   align-content: center;
   background-color: #ffffff;
   border: 1px solid transparent;
-  border-radius: 1px;
+  border-radius: 3px;
 }
 
 .card-contents {
-  border-radius: 1px;
+  flex-grow: 1;
+  border-radius: 3px;
+  text-align: center;
 }
 
 .icons {
-  margin: 1.5em 0;
+  perspective: 100vw;
+  margin: 1.5em auto;
+  height: auto;
+  max-width: 250px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.icons,
+.icons img {
+  transition: all 0.8s ease-in-out;
 }
 
 .icons:hover {
@@ -132,14 +143,73 @@ a:focus {
   margin-bottom: 0;
 }
 
+.card {
+  -webkit-perspective: 100vw;
+  perspective: 100vw;
+  width: 336px;
+  height: 192px;
+}
+
+.card__side {
+  width: 336px;
+  height: 192px;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.3);
+}
+
+.card__side--front {
+  background-color: var(--turquoise);
+}
+
+.card__side--back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: var(--turquoise);
+}
+
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
 @media (max-width: 355px) {
   .card-border {
+    height: 336px;
+    width: 192px;
+    background-size: 48px 48px;
+  }
+
+  .card {
+    height: 336px;
+    width: 192px;
+  }
+
+  .card__side {
     height: 336px;
     width: 192px;
   }
 
   .card-contents {
-    padding: 10px;
+    text-align: center;
+  }
+
+  h2 {
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
