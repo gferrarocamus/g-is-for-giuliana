@@ -20,11 +20,11 @@ function App() {
           <div className="card-container">
             <div className="card-contents">
               <div className="icons">
-                <a href="https://www.linkedin.com/in/giulianaferraro/en"><img src={linkedin} alt="LinkedIn" /></a>
+                <a href="https://www.linkedin.com/in/giulianaferraro/en" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="LinkedIn" /></a>
                 {'| '}
-                <a href="https://github.com/gferrarocamus"><img src={github} alt="GitHub" /></a>
+                <a href="https://github.com/gferrarocamus" target="_blank" rel="noopener noreferrer"><img src={github} alt="GitHub" /></a>
                 {'| '}
-                <a href="https://join.skype.com/invite/wyL8Xviy3Af0"><img src={connect} alt="Skype" /></a>
+                <a href="https://join.skype.com/invite/wyL8Xviy3Af0" target="_blank" rel="noopener noreferrer"><img src={connect} alt="Skype" /></a>
               </div>
             </div>
           </div>
