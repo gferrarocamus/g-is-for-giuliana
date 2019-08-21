@@ -1,33 +1,222 @@
-.App {
+:root {
+  --extra-deep-red: #ae2f38;
+  --deep-red: #cd3943;
+  --bright-red: #e64250;
+  --pink: #ec5569;
+  --aquamarine: #a8ebfa;
+  --turquoise: #76e2f8;
+  --very-light-blue: #deecf1;
+  --light-blue: #c6e3e7;
+  --mid-blue: #8ebac5;
+  --bright-blue: #0893fb;
+  --grayish-blue: #3f5958;
+  --slate: #384949;
+  --dark-slate: #293939;
+  --almost-black: #293939;
+  --bright-green: #93c017;
+  --light-green: #a8d32a;
+  --yellow: #fcc038;
+  --orange: #ffa03a;
+}
+
+.card-border {
+  width: 336px;
+  height: 192px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 3px;
+  background: var(--turquoise);
+  background-color: -webkit-linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -moz-linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background-size: 84px 84px;
+  /* background-size: 168px 168px; */
+  -webkit-animation: barberpole 3s infinite linear;
+  animation: barberpole 3s infinite linear;
+  animation-play-state: paused;
+  transition: width 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+}
+
+.card-border:hover {
+  cursor: auto;
+}
+
+.card__side--front.card-border {
+  animation-play-state: running;
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.card-contents {
+  flex-grow: 1;
+  border-radius: 3px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icons {
+  perspective: 100vw;
+  margin: 1.5em auto;
+  height: auto;
+  max-width: 250px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.icons,
+.icons img {
+  transition: all 0.8s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icons:hover {
+  cursor: default;
+}
+
+a:hover,
+a:focus,
+a:active {
+  opacity: 0.5;
+}
+
+a:focus {
+  outline: none;
+}
+
+.card-contents > *:first-child {
+  margin-top: 0;
+}
+
+.card-contents > *:last-child {
+  margin-bottom: 0;
+}
+
+.card {
+  -webkit-perspective: 100vw;
+  perspective: 100vw;
+  width: 336px;
+  height: 192px;
+}
+
+.card__side {
+  width: 336px;
+  height: 192px;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.3);
+}
+
+.card__side--front {
+  background-color: var(--turquoise);
+}
+
+.card__side--back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: var(--turquoise);
+}
+
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+@media (max-width: 355px) {
+  .card-border {
+    height: 336px;
+    width: 192px;
+    background-size: 48px 48px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    height: 336px;
+    width: 192px;
+  }
+
+  .card__side {
+    height: 336px;
+    width: 192px;
+  }
+
+  .card-contents {
+    text-align: center;
+  }
+
+  h2 {
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 355.98px) {
+  h1,
+  h2,
+  h3 {
+    margin: 0;
   }
 }
