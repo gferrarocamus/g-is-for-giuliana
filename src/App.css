@@ -1,15 +1,99 @@
+:root {
+  --extra-deep-red: #ae2f38;
+  --deep-red: #cd3943;
+  --bright-red: #e64250;
+  --pink: #ec5569;
+  --aquamarine: #a8ebfa;
+  --turquoise: #76e2f8;
+  --light-blue: #c6e3e7;
+  --mid-blue: #8ebac5;
+  --bright-blue: #0893fb;
+  --grayish-blue: #3f5958;
+  --slate: #384949;
+  --dark-slate: #293939;
+  --almost-black: #293939;
+  --bright-green: #93c017;
+  --light-green: #a8d32a;
+  --yellow: #fcc038;
+  --orange: #ffa03a;
+}
+
 .App {
   border: none;
 }
 
 .card-border {
-  border: 1px solid blue;
+  width: 336px;
+  height: 192px;
+  display: flex;
+  justify-content: center;
   padding: 10px;
+  border-radius: 1px;
+  /* border: 1px solid blue; */
+  /* box-shadow: 2px 2px 2px var(--turquoise); */
+  background: var(--turquoise);
+  background-color: -webkit-linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -moz-linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background-size: 168px 168px;
+  -webkit-animation: barberpole 1.5s infinite linear;
+  animation: barberpole 1.5s infinite linear;
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #ffffff;
+  /* border: 1px solid pink; */
+  border-radius: 1px;
 }
 
 .card-contents {
-  border: 1px solid pink;
-  padding: 90px 75px;
 }
 
 .icons {
@@ -19,10 +103,10 @@
   justify-content: space-around;
 }
 
-.card-contents>*:first-child {
+.card-contents > *:first-child {
   margin-top: 0;
 }
 
-.card-contents>*:last-child {
+.card-contents > *:last-child {
   margin-bottom: 0;
 }

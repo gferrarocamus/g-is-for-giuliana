@@ -28,11 +28,19 @@ body {
   align-items: center;
   align-content: center;
   min-height: 100vh;
-  border: 1px solid black
 }
 
 h1,
 h2,
 h3 {
   font-family: inherit;
+  font-variant: small-caps;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 700;
 }
