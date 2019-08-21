@@ -5,6 +5,7 @@
   --pink: #ec5569;
   --aquamarine: #a8ebfa;
   --turquoise: #76e2f8;
+  --very-light-blue: #DEECF1;
   --light-blue: #c6e3e7;
   --mid-blue: #8ebac5;
   --bright-blue: #0893fb;
@@ -16,10 +17,6 @@
   --light-green: #a8d32a;
   --yellow: #fcc038;
   --orange: #ffa03a;
-}
-
-.App {
-  border: none;
 }
 
 .card-border {
@@ -68,9 +65,13 @@
     var(--deep-red) 75%,
     var(--turquoise) 75%
   );
-  background-size: 168px 168px;
+  background-size: 100px 100px;
+  /* background-size: 168px 168px;
   -webkit-animation: barberpole 1.5s infinite linear;
-  animation: barberpole 1.5s infinite linear;
+  animation: barberpole 1.5s infinite linear; */
+  transition: width 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+
 }
 
 @keyframes barberpole {
@@ -89,11 +90,12 @@
   align-items: center;
   align-content: center;
   background-color: #ffffff;
-  /* border: 1px solid pink; */
+  border: 1px solid transparent;
   border-radius: 1px;
 }
 
 .card-contents {
+  border-radius: 1px;
 }
 
 .icons {
@@ -103,10 +105,39 @@
   justify-content: space-around;
 }
 
+a:hover,
+a:focus,
+a:active {
+  opacity: 0.5;
+}
+
+a:focus {
+  outline: none;
+}
+
 .card-contents > *:first-child {
   margin-top: 0;
 }
 
 .card-contents > *:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 355px) {
+  .card-border {
+    height: 336px;
+    width: 192px;
+  }
+
+  .card-contents {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 355.98px) {
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
 }

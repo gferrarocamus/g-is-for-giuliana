@@ -7,6 +7,7 @@ import connect from './img/message-square.svg';
 function App() {
   return (
     <div className="App">
+      {/* <img src="https://image.flaticon.com/icons/svg/1168/1168004.svg" /> */}
       <div className="card-border">
         <div className="card-container">
           <div className="card-contents">
