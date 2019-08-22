@@ -34,7 +34,7 @@ body {
 }
 
 body:hover {
-  cursor: url('./img/code.svg'), auto;
+  cursor: url('./img/mouse-pointer.svg'), auto;
 }
 
 h1,
