@@ -6,13 +6,7 @@ import connect from './img/message-square.svg';
 
 function App() {
   return (
-    <div className={
-      `App ${!(matchMedia('(hover: none)').matches)
-        ? 'can-hover'
-        : ''
-      }`
-    }
-    >
+    <div className={!(matchMedia('(hover: none)').matches) ? 'App can-hover' : 'App'}>
       <div className="card">
         <div className="card-border card__side card__side--front">
           <div className="card-container">
