@@ -70,14 +70,11 @@
   animation-play-state: paused;
   transition: width 300ms ease-in-out;
   transition: height 300ms ease-in-out;
+  will-change: background-position;
 }
 
 .card-border:hover {
   cursor: auto;
-}
-
-.card__side--front.card-border {
-  animation-play-state: running;
 }
 
 @keyframes barberpole {
@@ -218,5 +215,11 @@ a:focus {
   h2,
   h3 {
     margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-border {
+    animation-play-state: running;
   }
 }
