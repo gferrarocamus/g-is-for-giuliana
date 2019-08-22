@@ -7,3 +7,8 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+// to-do:
+// * fix hover behavior for no-hover devices
+// * fix Animation
+// * fix vh height of container

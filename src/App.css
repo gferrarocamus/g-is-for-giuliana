@@ -65,12 +65,9 @@
   );
   background-size: 84px 84px;
   /* background-size: 168px 168px; */
-  -webkit-animation: barberpole 3s infinite linear;
-  animation: barberpole 3s infinite linear;
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
   transition: width 300ms ease-in-out;
   transition: height 300ms ease-in-out;
-  will-change: background-position;
 }
 
 .card-border:hover {
@@ -220,6 +217,9 @@ a:focus {
 
 @media (max-width: 768px) {
   .card-border {
+    -webkit-animation: barberpole 3s infinite linear;
+    animation: barberpole 3s infinite linear;
     animation-play-state: running;
+    will-change: background-position;
   }
 }
