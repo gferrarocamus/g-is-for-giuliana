@@ -27,7 +27,7 @@
   padding: 10px;
   border-radius: 3px;
   background: var(--turquoise);
-  background-color: -webkit-linear-gradient(
+  background: -webkit-linear-gradient(
     -45deg,
     var(--deep-red) 25%,
     var(--turquoise) 25%,
@@ -37,6 +37,15 @@
     var(--turquoise) 75%
   );
   background: -moz-linear-gradient(
+    -45deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -ms-linear-gradient(
     -45deg,
     var(--deep-red) 25%,
     var(--turquoise) 25%,
@@ -65,22 +74,12 @@
   );
   background-size: 84px 84px;
   /* background-size: 168px 168px; */
-  /* animation-play-state: paused; */
   transition: width 300ms ease-in-out;
   transition: height 300ms ease-in-out;
 }
 
 .card-border:hover {
   cursor: auto;
-}
-
-@keyframes barberpole {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 100%;
-  }
 }
 
 .card-container {
@@ -219,7 +218,16 @@ a:focus {
   .card-border {
     -webkit-animation: barberpole 3s infinite linear;
     animation: barberpole 3s infinite linear;
-    animation-play-state: running;
+    /* animation-play-state: running; */
     will-change: background-position;
+  }
+
+  @keyframes barberpole {
+    from {
+      background-position: 0%;
+    }
+    to {
+      background-position: 100%;
+    }
   }
 }
