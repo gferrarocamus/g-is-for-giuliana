@@ -5,14 +5,19 @@ import github from './img/github.svg';
 import connect from './img/message-square.svg';
 
 function App() {
+  window.addEventListener('mouseover', function onFirstHover() {
+    const app = document.getElementById('App');
+    app.classList.remove('no-hover');
+    window.removeEventListener('mouseover', onFirstHover, false);
+  }, false);
   const toggleActiveSide = () => {
     const card = document.getElementById('card');
     card.classList.toggle('flipped');
   };
   return (
-    <div className={!(matchMedia('(hover: none)').matches) ? 'App can-hover' : 'App no-hover'}>
-      <div className="card" id="card" role="main" onClick={() => {toggleActiveSide()}} onKeyDown={() => {toggleActiveSide() }}>
-        <div className="card-border card__side card__side--front">
+    <div className={!(matchMedia('(hover: none)').matches) ? 'can-hover' : 'no-hover'} id="App">
+      <div className="card" id="card" role="main" onClick={() => { toggleActiveSide(); }} onKeyDown={() => { toggleActiveSide(); }}>
+        <div className="card-border front-animation card-side card-side--front">
           <div className="card-container">
             <div className="card-contents">
               <h1>Giuliana Ferraro</h1>
@@ -20,7 +25,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="card-border card__side card__side--back">
+        <div className="card-border back-animation card-side card-side--back">
           <div className="card-container">
             <div className="card-contents">
               <div className="icons">

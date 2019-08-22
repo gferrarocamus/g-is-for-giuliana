@@ -27,6 +27,9 @@
   padding: 10px;
   border-radius: 3px;
   background: var(--turquoise);
+}
+
+.front-animation {
   background: -webkit-linear-gradient(
     -45deg,
     var(--deep-red) 25%,
@@ -76,18 +79,82 @@
   /* background-size: 168px 168px; */
   transition: width 300ms ease-in-out;
   transition: height 300ms ease-in-out;
-  -webkit-animation: barberpole 3s infinite linear;
-  animation: barberpole 3s infinite linear;
+  -webkit-animation: barberpole-front 3s infinite linear;
+  animation: barberpole-front 3s infinite linear;
   animation-play-state: running;
   will-change: background-position;
 }
 
-@keyframes barberpole {
+.back-animation {
+  background: -webkit-linear-gradient(
+    225deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -moz-linear-gradient(
+    225deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -ms-linear-gradient(
+    225deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: -o-linear-gradient(
+    225deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  );
+  background: linear-gradient(
+    225deg,
+    var(--deep-red) 25%,
+    var(--turquoise) 25%,
+    var(--turquoise) 50%,
+    var(--deep-red) 50%,
+    var(--deep-red) 75%,
+    var(--turquoise) 75%
+  ); background-size: 84px 84px;
+  /* background-size: 168px 168px; */
+  transition: width 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+  -webkit-animation: barberpole-back 3s infinite linear;
+  animation: barberpole-back 3s infinite linear;
+  animation-play-state: running;
+  will-change: background-position;
+}
+
+@keyframes barberpole-front {
   from {
     background-position: 0%;
   }
   to {
     background-position: 100%;
+  }
+}
+
+@keyframes barberpole-back {
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: 0%;
   }
 }
 
@@ -119,8 +186,8 @@
 }
 
 .icons:hover,
-.card-border.card__side--back:hover,
-.card-border.card__side--front:hover {
+.card-border.card-side--back:hover,
+.card-border.card-side--front:hover {
   cursor: url('./img/mouse-pointer.svg'), default;
 }
 
@@ -155,7 +222,7 @@ a:focus {
   height: 192px;
 }
 
-.card__side {
+.card-side {
   width: 336px;
   height: 192px;
   transition: all 0.8s ease-in-out;
@@ -169,45 +236,41 @@ a:focus {
   overflow: hidden;
   transform-style: preserve-3d;
   perspective-origin: center;
+  background-color: var(--turquoise);
   box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.3);
 }
 
-.card__side--front {
-  background-color: var(--turquoise);
-}
-
-.card__side--back {
+.card-side--back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
-  background-color: var(--turquoise);
 }
 
-.card:hover .card__side--front {
+.card:hover .card-side--front {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 
-.card:hover .card__side--back {
+.card:hover .card-side--back {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
 
-.no-hover .card .card__side--front {
+.no-hover .card .card-side--front {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(0deg);
 }
 
-.no-hover .card .card__side--back {
+.no-hover .card .card-side--back {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(180deg);
 }
 
-.no-hover .card.flipped .card__side--front {
+.no-hover .card.flipped .card-side--front {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 
-.no-hover .card.flipped .card__side--back {
+.no-hover .card.flipped .card-side--back {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
@@ -224,7 +287,7 @@ a:focus {
     width: 192px;
   }
 
-  .card__side {
+  .card-side {
     height: 336px;
     width: 192px;
   }
