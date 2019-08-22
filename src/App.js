@@ -5,9 +5,13 @@ import github from './img/github.svg';
 import connect from './img/message-square.svg';
 
 function App() {
+  const toggleActiveSide = () => {
+    const card = document.getElementById('card');
+    card.classList.toggle('flipped');
+  };
   return (
-    <div className={!(matchMedia('(hover: none)').matches) ? 'App can-hover' : 'App'}>
-      <div className="card">
+    <div className={!(matchMedia('(hover: none)').matches) ? 'App can-hover' : 'App no-hover'}>
+      <div className="card" id="card" role="main" onClick={() => {toggleActiveSide()}} onKeyDown={() => {toggleActiveSide() }}>
         <div className="card-border card__side card__side--front">
           <div className="card-container">
             <div className="card-contents">

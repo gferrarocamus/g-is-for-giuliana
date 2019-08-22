@@ -22,5 +22,6 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': 0,
+    'no-noninteractive-element-interactions': 0,
   },
 };
