@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b4b60d0bfaa33a3464f5c387f9f49a50",
+    "revision": "a8f631a85d751afdccbc32525532d3b0",
     "url": "/g-is-for-giuliana/index.html"
   },
   {
-    "revision": "583098de41b4701c8758",
+    "revision": "0e75b7fd9b0f05aeb437",
     "url": "/g-is-for-giuliana/static/css/main.16c272f9.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/g-is-for-giuliana/static/js/2.6da9e995.chunk.js"
   },
   {
-    "revision": "583098de41b4701c8758",
-    "url": "/g-is-for-giuliana/static/js/main.4a130129.chunk.js"
+    "revision": "0e75b7fd9b0f05aeb437",
+    "url": "/g-is-for-giuliana/static/js/main.33aba06b.chunk.js"
   },
   {
     "revision": "ef311551a172ee5c4273",

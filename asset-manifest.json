@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/g-is-for-giuliana/static/css/main.16c272f9.chunk.css",
-    "main.js": "/g-is-for-giuliana/static/js/main.4a130129.chunk.js",
-    "main.js.map": "/g-is-for-giuliana/static/js/main.4a130129.chunk.js.map",
+    "main.js": "/g-is-for-giuliana/static/js/main.33aba06b.chunk.js",
+    "main.js.map": "/g-is-for-giuliana/static/js/main.33aba06b.chunk.js.map",
     "runtime~main.js": "/g-is-for-giuliana/static/js/runtime~main.aab93747.js",
     "runtime~main.js.map": "/g-is-for-giuliana/static/js/runtime~main.aab93747.js.map",
     "static/js/2.6da9e995.chunk.js": "/g-is-for-giuliana/static/js/2.6da9e995.chunk.js",
     "static/js/2.6da9e995.chunk.js.map": "/g-is-for-giuliana/static/js/2.6da9e995.chunk.js.map",
     "index.html": "/g-is-for-giuliana/index.html",
-    "precache-manifest.ebd18a8381b2bfe4cb8e65b126c46e83.js": "/g-is-for-giuliana/precache-manifest.ebd18a8381b2bfe4cb8e65b126c46e83.js",
+    "precache-manifest.86a9b70f027f11ebc412d6deebceffae.js": "/g-is-for-giuliana/precache-manifest.86a9b70f027f11ebc412d6deebceffae.js",
     "service-worker.js": "/g-is-for-giuliana/service-worker.js",
     "static/css/main.16c272f9.chunk.css.map": "/g-is-for-giuliana/static/css/main.16c272f9.chunk.css.map",
     "static/media/github.svg": "/g-is-for-giuliana/static/media/github.5cff78e4.svg",

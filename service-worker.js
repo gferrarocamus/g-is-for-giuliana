@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/g-is-for-giuliana/precache-manifest.ebd18a8381b2bfe4cb8e65b126c46e83.js"
+  "/g-is-for-giuliana/precache-manifest.86a9b70f027f11ebc412d6deebceffae.js"
 );
 
 self.addEventListener('message', (event) => {
