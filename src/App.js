@@ -6,8 +6,8 @@ import connect from './img/message-square.svg';
 
 function App() {
   window.addEventListener('mouseover', function onFirstHover() {
-    const app = document.getElementById('App');
-    app.classList.remove('no-hover');
+    // const app = document.getElementById('App');
+    // app.classList.remove('no-hover');
     window.removeEventListener('mouseover', onFirstHover, false);
   }, false);
   const toggleActiveSide = () => {
@@ -15,7 +15,7 @@ function App() {
     card.classList.toggle('flipped');
   };
   return (
-    <div className={!(matchMedia('(hover: none)').matches) ? 'can-hover' : 'no-hover'} id="App">
+    <div className={(matchMedia('(hover: none)').matches) ? 'no-hover' : 'can-hover'} id="App">
       <div className="card" id="card" role="main" onClick={() => { toggleActiveSide(); }} onKeyDown={() => { toggleActiveSide(); }}>
         <div className="card-border front-animation card-side card-side--front">
           <div className="card-container">
